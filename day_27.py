@@ -15,7 +15,6 @@ class Solution:
 
 #{ 
  # Driver Code Starts
-#Initial Template for Python 3
 
 if __name__ == '__main__':
     t = int(input())
@@ -43,7 +42,6 @@ class Solution:
         
 #{ 
  # Driver Code Starts
-#Initial Template for Python 3
 
 if __name__ == '__main__':
     t = int(input())
@@ -55,32 +53,6 @@ if __name__ == '__main__':
 
 
 #pattern-3
-
-class Solution:
-    def printTriangle(self, N):
-        stars=1
-        for i in range(1,N+1):
-            string="" 
-            space=N-i 
-            string=string+(" "*space)+"*"*(stars) 
-            print(string) 
-            stars+=2
-
-
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        N = int(input())
-        ob = Solution()
-        ob.printTriangle(N)
-# } Driver Code Ends //1
-
-
-#User function Template for python3
 
 class Solution:
     def printDiamond(self, N):
