@@ -48,16 +48,13 @@ if __name__ == '__main__':
 
 class Solution:
     def printTriangle(self, N):
-        start=2
+        start=1
         for i in range(1,N+1):
             string="" 
-            if(i==1):
-                print("1")
-            else:
-                for j in range(start,start+i):
-                    string=string+str(j)+" " 
-                print(string)  
-                start=j+1 
+            for j in range(start,start+i):
+                string=string+str(j)+" " 
+            print(string)  
+            start=j+1 
                 
                 
                 
