@@ -46,8 +46,6 @@ if __name__ == '__main__':
 
 # pattern-2 
 
-#User function Template for python3
-
 class Solution:
     def printTriangle(self, N):
         start=2
