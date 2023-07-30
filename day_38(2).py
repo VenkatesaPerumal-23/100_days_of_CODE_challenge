@@ -1,7 +1,7 @@
 #binary to decimal
 class Solution:
-	def binary_to_decimal(self, str):
-	 dec=int(str) 
+     def binary_to_decimal(self, str):
+     dec=int(str) 
      decimal=0
      p=0
      while(dec>0):
