@@ -1,22 +1,16 @@
-#longest subarray with sum k
-
+#subarray sum equals to k
 class Solution:
-    def lenOfLongSubarr (self, arr, n, k) : 
-        dictmap={} 
-        maxlen=0 
-        summ=0 
-        for i in range(n):
-            summ+=arr[i] 
-            
-            if summ==k:
-                maxlen=max(maxlen,i+1)
+    def subarraySum(self, nums: List[int], k: int) -> int: 
+        map={0:1} 
+        count=0 
+        presum=0 
+        for x in nums:
+            presum+=x 
+            if(presum-k) in map:
+                count+=map[presum-k] 
+            if presum in map:
+                map[presum]+=1 
+            else:
+                map[presum]=1 
                 
-            rem=summ-k 
-            if rem in dictmap:
-                length=i-dictmap[rem] 
-                maxlen=max(maxlen,length) 
-                
-            if summ not in dictmap:
-                dictmap[summ]=i 
-                
-        return maxlen
+        return count
