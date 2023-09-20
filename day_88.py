@@ -1,32 +1,32 @@
 #Number of occurrence
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
-        index_arr=[] 
-        first_index=-1
-        second_index=-1 
-        low=0
-        high=len(nums)-1 
-        while(low<=high):
-            mid=(low+high)//2 
-            if(nums[mid]==target):
-                first_index=mid 
-                high=mid-1 
-            elif(nums[mid]>target):
-                high=mid-1
-            else:
-                low=mid+1 
-        index_arr.append(first_index)
-        
-        low=0 
-        high=len(nums)-1 
-        while(low<=high):
-            mid=(low+high)//2 
-            if(nums[mid]==target):  
-                second_index=mid 
-                low=mid+1
-            elif(nums[mid]>target):
-                high=mid-1 
-            else:
-                low=mid+1  
-        index_arr.append(second_index) 
-        return index_arr
+   def count(self,arr, n, x):
+	    first=-1 
+	    second=-1
+		low=0 
+		high=n-1 
+		while(low<=high):
+		    mid=(low+high)//2 
+		    if(arr[mid]==x):
+		        first=mid 
+		        high=mid-1 
+		    elif(arr[mid]>x):
+		        high=mid-1 
+		    else:
+		        low=mid+1 
+		low=0 
+		high=n-1 
+	    while(low<=high):
+		    mid=(low+high)//2 
+		    if(arr[mid]==x):
+		        second=mid 
+		        low=mid+1 
+		    elif(arr[mid]>x):
+		        high=mid-1 
+		    else:
+		        low=mid+1 
+		        
+		if(first==-1 or second==-1):
+		    return 0 
+		else:
+		    return second-first+1
